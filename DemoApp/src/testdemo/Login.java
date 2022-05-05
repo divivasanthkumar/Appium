@@ -259,8 +259,8 @@ public class Login extends App99acres{
 			String time = driver.getDeviceTime();
 			System.out.println("Device time is:" + time);
 			System.out.println("Device Orientation is :" + driver.getOrientation());	
-			driver.rotate(ScreenOrientation.LANDSCAPE);
-			System.out.println("Orientation changed to Landscape");
+//			driver.rotate(ScreenOrientation.LANDSCAPE);
+//			System.out.println("Orientation changed to Landscape");
 			System.out.println("Device Battery info is :" + driver.getBatteryInfo());
 			System.out.println("Device Displaydensity is :" + driver.getDisplayDensity());	
 			driver.lockDevice();
@@ -269,11 +269,11 @@ public class Login extends App99acres{
 			System.out.println("Device is unlocked :" + driver.isDeviceLocked());
 			System.out.println("Device Current Activity is :" + driver.currentActivity());
 			System.out.println("Device Current Package is :" +  driver.getCurrentPackage());
-			driver.runAppInBackground(Duration.ofSeconds(5000));
-			driver.launchApp();
-			System.out.println("App running in background");
-			driver.activateApp("com.nnacres.app");
-			driver.executeScript("mobile: pressButton", ImmutableMap.of("name", "home"));
+//			driver.runAppInBackground(Duration.ofSeconds(5000));
+//			driver.launchApp();
+//			System.out.println("App running in background");
+//			driver.activateApp("com.nnacres.app");
+//			driver.executeScript("mobile: pressButton", ImmutableMap.of("name", "home"));
 			driver.findElement(By.xpath("//*[@text='Profile']")).click();
 			driver.pressKey(new KeyEvent(AndroidKey.BACK));
 			Thread.sleep(2000);
